@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>Weather Forcast</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="style.css" rel="stylesheet" type="text/css" /> 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+</head>
+<body >
+	<div class="container">
+        <div class="page-header">
+    <h1>Weather Forecast <small></small></h1>
+</div>
+        <ul class="list-inline">
+  <li class="list-inline-item"><a href="/#/current">Current Weather</a></li>
+  <li class="list-inline-item"><a href="/#/day3">3 Days Weather</a></li>
+  <li class="list-inline-item" ><a href="/#/day7">Weak Weather</a></li>
+</ul>
+<!--
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+            <div class="weather">
+                <div class="current">
+                    <div class="info">
+                        <div>&nbsp;</div>
+                        <div class="city"><small><small>CITY:</small></small> {{city}}</div>
+                        <div class="temp">{{deg}}&deg; <small>{{unit}}</small></div>
+                        <div class="wind"><small><small>WIND:</small></small> {{wind}}</div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div class="icon">
+                        <img ng-src="{{img}}">
+                        <p class="wi-day-cloudy" >{{text}}</p>
+                    </div>
+                </div>
+                <div class="future">
+                    <div class="day">
+                        <h3>{{tod}}</h3>
+                        <p><span class="wi-day-cloudy"></span></p>
+                    </div>
+                    <div class="day">
+                        <h3>Tue</h3>
+                        <p><span class="wi-showers"></span></p>
+                    </div>
+                    <div class="day">
+                        <h3>Wed</h3>
+                        <p><span class="wi-rain"></span></p>
+                    </div>
+                    <ng-view></ng-view>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+        <ng-view></ng-view>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    <script src="app.js"></script>
+        <script src="current.js"></script>
+        <script src="3days.js"></script>
+      <script src="7days.js"></script>
+</body>
+</html>

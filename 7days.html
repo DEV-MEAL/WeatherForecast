@@ -1,0 +1,30 @@
+
+<div class="center">
+<div class="row" >
+        <div class="col-md-1" ng-repeat="weather in weathers">
+            <div class="weather">
+                <div class="current">
+                    <div class="info">
+                       <!--                       <div class="city"><small><small>CITY:</small></small> {{city}}</div>-->
+                        <div class="tempWeak">{{weather.day.avgtemp_c}}&deg; <small>C</small></div>
+<!--
+                        <div class="windWeak"><small><small>WIND:</small></small> {{weather.day.maxwind_kph}}</div>
+                        <div>&nbsp;</div>
+-->
+                    </div>
+                    <div class="icon">
+                        <img ng-src="{{weather.day.condition.icon}}">
+                        <p class="wi-day-cloudy" >{{weather.day.condition.text}}</p>
+                    </div>
+                </div>
+                <div class="future">
+                    <div class="day">
+                        <h3>{{getDay(weather.date)}}</h3>
+                        <p><span class="wi-day-cloudy"></span></p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
